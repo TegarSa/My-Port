@@ -1,0 +1,92 @@
+/* Efek waving pada ikon */
+.waving {
+  animation: wave-animation 1.5s ease-in-out infinite;
+}
+
+/* Keyframes untuk animasi waving */
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-15deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.animated-border {
+  position: absolute;
+  width: 20rem; 
+  height: 20rem; 
+  top: 300%; 
+  right: 18rem; 
+  transform: translateX(50%);
+  border: 10px dashed transparent; 
+  background: linear-gradient(45deg, #3b82f6 25%, transparent 25%) 0 0,
+              linear-gradient(45deg, transparent 75%, #60a5fa 75%) 0 0;
+  background-size: 1rem 1rem;
+  animation: move-dashed-border 10s linear infinite; 
+}
+
+@media (max-width: 768px) {
+  .animated-border {
+    width: 16rem; 
+    height: 16rem;
+    top: 250%; 
+    left: 50%; 
+    right: auto; 
+    transform: translate(-50%, 0); 
+  }
+}
+
+@media (max-width: 640px) {
+  .animated-border {
+    width: 10rem;
+    height: 10rem;
+    top: 150%; 
+    left: 49%; 
+    right: auto; 
+    transform: translate(-50%, 0);
+  }
+}
+
+@keyframes move-dashed-border {
+  0% {
+    background-position: 0 0, 0 0, 1rem 1rem, 1rem 1rem;
+  }
+  100% {
+    background-position: 100% 100%, 100% 100%, 0 0, 0 0;
+  }
+}
+
+@keyframes pulse-shadow-pink {
+  0% {
+    text-shadow: 0 0 4px rgba(219, 39, 119, 0.5), 0 0 8px rgba(219, 39, 119, 0.5);
+  }
+  50% {
+    text-shadow: 0 0 10px rgba(219, 39, 119, 1), 0 0 20px rgba(219, 39, 119, 1);
+  }
+  100% {
+    text-shadow: 0 0 4px rgba(219, 39, 119, 0.5), 0 0 8px rgba(219, 39, 119, 0.5);
+  }
+}
+
+.text-pink-glow {
+  animation: pulse-shadow-pink 1.5s infinite alternate;
+}
+
+/* Custom CSS for responsiveness */
+@media (max-width: 640px) {
+  .responsive-button {
+    padding: 8px 16px !important;
+    font-size: 14px !important;
+  }
+}
