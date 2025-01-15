@@ -14,28 +14,28 @@ const projects = [
     description: "A modern e-commerce platform with advanced search capabilities and a user-friendly interface.",
     githubLink: "https://github.com/username/project1",
     liveDemo: "https://wisatasemilirterbah.com",
-    image: image1, // menggunakan variabel gambar yang diimpor
+    image: image1, 
   },
   {
     title: "Website Wisata Nglanggeran",
     description: "A portfolio website showcasing various skills and projects in a sleek design.",
     githubLink: "https://github.com/username/project2",
     liveDemo: "https://wisatanglanggeran.com",
-    image: image2, // menggunakan variabel gambar yang diimpor
+    image: image2, 
   },
   {
     title: "Website Wisata Pengklik",
     description: "A real-time chat application built with Node.js and WebSocket technology.",
     githubLink: "https://github.com/username/project3",
     liveDemo: "https://wisatapengklik.com",
-    image: image3, // menggunakan variabel gambar yang diimpor
+    image: image3, 
   },
   {
     title: "Bookshelf-Api",
     description: "A real-time chat application built with Node.js and WebSocket technology.",
     githubLink: "https://github.com/username/project4",
     liveDemo: "https://project4.com",
-    image: image4, // menggunakan variabel gambar yang diimpor
+    image: image4, 
   },
 ];
 
@@ -54,7 +54,7 @@ const Portfolio = ({ isDarkMode }) => {
 
       <div className="relative z-10 text-center">
         <motion.h1
-          className={`text-4xl font-bold ${
+          className={`md:text-4xl text-2xl font-bold ${
             isDarkMode ? "text-white" : "text-black"
           } font-vt323 text-blue-glow`}
           initial={{ opacity: 0, y: -50 }}
@@ -64,7 +64,7 @@ const Portfolio = ({ isDarkMode }) => {
           My Projects
         </motion.h1>
         <motion.p
-          className={`mt-4 text-base font-vt323 ${
+          className={`mt-4 text-sm sm:text-xs lg:text-lg font-vt323 ${
             isDarkMode ? "text-gray-400" : "text-gray-700"
           }`}
           initial={{ opacity: 0 }}

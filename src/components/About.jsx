@@ -5,17 +5,17 @@ import "./About.css";
 
 const About = ({ isDarkMode }) => {
   const [isInView, setIsInView] = useState(false);
-  const [windowSize, setWindowSize] = useState(window.innerWidth); // State untuk menyimpan ukuran window
+  const [windowSize, setWindowSize] = useState(window.innerWidth); 
 
-  // Update window size setiap kali ukuran layar berubah
+
   const updateWindowSize = () => {
     setWindowSize(window.innerWidth);
   };
 
   useEffect(() => {
-    window.addEventListener("resize", updateWindowSize); // Menambahkan event listener untuk resize
+    window.addEventListener("resize", updateWindowSize); 
     return () => {
-      window.removeEventListener("resize", updateWindowSize); // Cleanup listener saat komponen dibersihkan
+      window.removeEventListener("resize", updateWindowSize); 
     };
   }, []);
 
@@ -54,13 +54,13 @@ const About = ({ isDarkMode }) => {
       });
     };
 
-    // Fungsi untuk animasi pengurangan
+    
     const animateNumberSubtraction = (target, index) => {
       return new Promise((resolve) => {
         let current = target;
 
         const interval = setInterval(() => {
-          current -= 1; // Mengurangi angka
+          current -= 1; 
           if (current <= 0) {
             current = 0;
             clearInterval(interval);
@@ -77,21 +77,16 @@ const About = ({ isDarkMode }) => {
     };
 
     (async () => {
-      let loopCount = 0;
-      while (loopCount < 3) { // Looping 3 kali (penambahan + pengurangan)
-        // Penambahan angka dimulai dari kiri ke kanan
+      while (true) { 
         for (let i = 0; i < stats.length; i++) {
           await animateNumberAddition(stats[i].value, i);
         }
-
-        // Pengurangan dimulai dari kanan ke kiri setelah penambahan selesai
+    
         for (let i = stats.length - 1; i >= 0; i--) {
           await animateNumberSubtraction(stats[i].value, i);
         }
-
-        loopCount++;
       }
-    })();
+    })();    
   };
 
   useEffect(() => {
@@ -115,7 +110,7 @@ const About = ({ isDarkMode }) => {
 
   useEffect(() => {
     if (isInView) {
-      animateNumbersSequentially(); // Memulai animasi saat section About terlihat
+      animateNumbersSequentially(); 
     }
   }, [isInView]);
 
@@ -153,7 +148,7 @@ const About = ({ isDarkMode }) => {
       {/* Main content */}
       <div className="relative flex items-center justify-center">
         <motion.div
-          className="absolute md:left-20 left-44 flex items-center justify-center"
+          className="absolute md:left-20 left-0 flex items-center justify-center"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
@@ -164,7 +159,7 @@ const About = ({ isDarkMode }) => {
           />
         </motion.div>
         <motion.h1
-          className={`md:text-4xl font-extrabold absolute left-56 md:left-40 ${
+          className={`md:text-4xl font-extrabold absolute left-10 md:left-40 ${
             isDarkMode ? "text-pink-glow text-white" : "text-black"
           }`}
           initial={{ opacity: 0 }}
@@ -208,7 +203,7 @@ const About = ({ isDarkMode }) => {
         </motion.div>
       </div>
 
-      <div className="flex justify-center space-x-8 lg:pt-48 pt-20 pb-10">
+      <div className="flex justify-center space-x-8 lg:pt-48 pt-10 pb-10">
         {stats.map((stat, index) => (
           <motion.div
             key={index}

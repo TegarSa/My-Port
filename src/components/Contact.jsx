@@ -23,7 +23,7 @@ const Contact = ({ isDarkMode }) => {
 
       <div className="relative z-10 text-center">
         <motion.h1
-          className={`text-4xl font-bold ${isDarkMode ? 'text-white' : 'text-black'} font-vt323 text-blue-glow`}
+          className={`sm:text-2xl md:text-4xl font-bold ${isDarkMode ? 'text-white' : 'text-black'} font-vt323 text-blue-glow`}
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
