@@ -31,7 +31,7 @@ const Contact = ({ isDarkMode }) => {
           Contact Me
         </motion.h1>
         <motion.p
-          className={`mt-4 text-base ${isDarkMode ? 'text-gray-400' : 'text-gray-600'} font-vt323`}
+          className={`mt-4 text-sm sm:text-xs lg:text-lg ${isDarkMode ? 'text-gray-400' : 'text-gray-600'} font-vt323`}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.5 }}
@@ -50,8 +50,8 @@ const Contact = ({ isDarkMode }) => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <h3 className="text-2xl font-bold font-vt323 mb-4">Contact Information</h3>
-            <ul className="space-y-4 font-vt323">
+            <h3 className="text-sm sm:text-xs lg:text-lg font-bold font-vt323 mb-4">Contact Information</h3>
+            <ul className="space-y-4 font-vt323 text-sm sm:text-xs lg:text-lg">
               {[
                 { icon: <FaPhoneAlt size={20} />, text: "+62 123 456 789" },
                 { icon: <FaEnvelope size={20} />, text: "email@example.com" },
@@ -75,13 +75,13 @@ const Contact = ({ isDarkMode }) => {
 
           {/* Additional Card */}
           <motion.div
-            className={`rounded-lg p-6 shadow-lg hover:shadow-2xl transition-shadow duration-300 ${isDarkMode ? 'bg-gray-800 text-white' : 'bg-white text-black'}`}
+            className={`rounded-lg p-6 shadow-lg text-sm sm:text-xs lg:text-lg hover:shadow-2xl transition-shadow duration-300 ${isDarkMode ? 'bg-gray-800 text-white' : 'bg-white text-black'}`}
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <motion.h3
-              className="text-xl font-bold font-vt323 mb-4"
+              className="text-sm sm:text-xs lg:text-lg font-bold font-vt323 mb-4"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
@@ -106,8 +106,8 @@ const Contact = ({ isDarkMode }) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          <h3 className="text-2xl font-bold font-vt323 mb-4">Leave Your Feedback</h3>
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <h3 className="text-sm sm:text-xs lg:text-lg font-bold font-vt323 mb-4">Leave Your Feedback</h3>
+          <form onSubmit={handleSubmit} className="space-y-6 text-sm sm:text-xs lg:text-lg">
             {[
               { label: "Your Name", type: "text", id: "name", placeholder: "Enter your name" },
               { label: "Your Message", type: "textarea", id: "message", placeholder: "Write your message here", rows: 5 },
@@ -143,7 +143,7 @@ const Contact = ({ isDarkMode }) => {
             ))}
             <motion.button
               type="submit"
-              className={`px-6 py-3 ${isDarkMode ? 'bg-blue-500' : 'bg-blue-700'} text-white rounded-lg hover:bg-blue-700 transition-all duration-300 font-vt323`}
+              className={`px-6 py-3 ${isDarkMode ? 'bg-blue-500' : 'bg-blue-700'} text-white rounded-lg hover:bg-blue-700 transition-all duration-300 font-vt323 `}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
