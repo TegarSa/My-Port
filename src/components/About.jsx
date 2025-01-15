@@ -148,7 +148,7 @@ const About = ({ isDarkMode }) => {
       {/* Main content */}
       <div className="relative flex items-center justify-center">
         <motion.div
-          className="absolute md:left-20 left-0 flex items-center justify-center"
+          className="absolute md:left-20 left-44 flex items-center justify-center"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
@@ -159,7 +159,7 @@ const About = ({ isDarkMode }) => {
           />
         </motion.div>
         <motion.h1
-          className={`md:text-4xl font-extrabold absolute left-10 md:left-40 ${
+          className={`md:text-4xl font-extrabold absolute left-56 md:left-40 ${
             isDarkMode ? "text-pink-glow text-white" : "text-black"
           }`}
           initial={{ opacity: 0 }}
@@ -203,25 +203,25 @@ const About = ({ isDarkMode }) => {
         </motion.div>
       </div>
 
-      <div className="flex justify-center space-x-8 lg:pt-48 pt-10 pb-10">
+      <div className="flex justify-center space-x-4 lg:pt-48 pt-10">
         {stats.map((stat, index) => (
           <motion.div
             key={index}
-            className="text-center space-y-2"
+            className="text-center space-y-1"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 1 + index * 0.2 }}
           >
-            <div className="flex justify-center items-center space-x-4 font-vt323 ">
+            <div className="flex justify-center items-center space-x-2 font-vt323">
               <p
-                className={`md:text-3xl sm:text-xl font-extrabold drop-shadow-lg ${
+                className={`text-sm sm:text-lg font-extrabold drop-shadow-lg ${
                   isDarkMode ? "text-white" : "text-black"
                 }`}
               >
                 {counts[index]}
               </p>
               <p
-                className={`text-xs sm:text-sm md:text-base drop-shadow-sm ${
+                className={`text-xs sm:text-sm drop-shadow-sm ${
                   isDarkMode ? "text-white" : "text-black"
                 }`}
               >
