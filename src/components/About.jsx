@@ -148,7 +148,7 @@ const About = ({ isDarkMode }) => {
       {/* Main content */}
       <div className="relative flex items-center justify-center">
         <motion.div
-          className="absolute md:left-20 left-44 flex items-center justify-center"
+          className="absolute md:left-20 left-16 flex items-center justify-center"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
@@ -159,7 +159,7 @@ const About = ({ isDarkMode }) => {
           />
         </motion.div>
         <motion.h1
-          className={`md:text-4xl font-extrabold absolute left-56 md:left-40 ${
+          className={`md:text-4xl font-extrabold absolute left-28 md:left-40 ${
             isDarkMode ? "text-pink-glow text-white" : "text-black"
           }`}
           initial={{ opacity: 0 }}
