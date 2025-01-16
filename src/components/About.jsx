@@ -203,7 +203,7 @@ const About = ({ isDarkMode }) => {
         </motion.div>
       </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 justify-items-center lg:pt-48 pt-10 pb-14">
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 justify-items-center lg:pt-48 pt-10 pb-2">
         {stats.map((stat, index) => (
           <motion.div
             key={index}
