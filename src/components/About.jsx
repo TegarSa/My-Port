@@ -203,25 +203,29 @@ const About = ({ isDarkMode }) => {
         </motion.div>
       </div>
 
-      <div className="flex justify-center space-x-4 lg:pt-48 pt-10">
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 justify-items-center lg:pt-48 pt-10">
         {stats.map((stat, index) => (
           <motion.div
             key={index}
-            className="text-center space-y-1"
+            className="relative text-center space-y-1 p-4 rounded-lg overflow-hidden"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 1 + index * 0.2 }}
           >
-            <div className="flex justify-center items-center space-x-2 font-vt323">
+            {/* Lapisan Gradien */}
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-transparent to-pink-500 opacity-20"></div>
+            
+            {/* Konten Kartu */}
+            <div className="relative z-10 flex justify-center items-center space-x-2 font-vt323">
               <p
-                className={`text-sm sm:text-lg font-extrabold drop-shadow-lg ${
+                className={`text-[10px] sm:text-lg md:text-sm font-extrabold drop-shadow-lg ${
                   isDarkMode ? "text-white" : "text-black"
                 }`}
               >
                 {counts[index]}
               </p>
               <p
-                className={`text-xs sm:text-sm drop-shadow-sm ${
+                className={`text-[8px] sm:text-base md:text-base drop-shadow-sm ${
                   isDarkMode ? "text-white" : "text-black"
                 }`}
               >
