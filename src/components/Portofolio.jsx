@@ -6,6 +6,7 @@ import image1 from '../assets/image.png';
 import image2 from '../assets/image copy.png';
 import image3 from '../assets/image copy 2.png';
 import image4 from '../assets/image copy 3.png';
+import image5 from '../assets/image copy 4.png';
 
 
 const projects = [
@@ -36,6 +37,13 @@ const projects = [
     githubLink: "https://github.com/username/project4",
     liveDemo: "https://project4.com",
     image: image4, 
+  },
+  {
+    title: "Website Wisata Pengklik",
+    description: "A real-time chat application built with Node.js and WebSocket technology.",
+    githubLink: "https://github.com/username/project3",
+    liveDemo: "https://guajepangpundong.web.id",
+    image: image5, 
   },
 ];
 
