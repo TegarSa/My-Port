@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaDiscord, FaTwitter } from "react-icons/fa";
 
 const Contact = ({ isDarkMode }) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -56,7 +56,7 @@ const Contact = ({ isDarkMode }) => {
                 { icon: <FaPhoneAlt size={20} />, text: "+62 123 456 789" },
                 { icon: <FaEnvelope size={20} />, text: "email@example.com" },
                 { icon: <FaMapMarkerAlt size={20} />, text: "Yogyakarta, Indonesia" },
-                { icon: <FaLinkedin size={20} />, text: "linkedin.com/in/tegarsatria" },
+                { icon: <FaDiscord size={20} />, text: "discord.gg/zhongxinatg"},
                 { icon: <FaTwitter size={20} />, text: "@username" },
               ].map((item, i) => (
                 <motion.li
