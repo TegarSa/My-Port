@@ -19,7 +19,7 @@ const Navbar = ({ isDarkMode }) => {
 
   useEffect(() => {
     setIsAboutPage(location.pathname === "/about");
-    setIsMenuOpen(false); // Menutup menu setiap kali lokasi berubah
+    setIsMenuOpen(false); 
   }, [location]);
 
   return (
