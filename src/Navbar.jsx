@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { HiOutlineMusicNote, HiOutlineStop, HiOutlineMenuAlt4, HiOutlineX } from "react-icons/hi";
-import { Link, useLocation } from "react-router-dom"; 
+import { Link, useLocation } from "react-router-dom";
 import "./components/About";
 import profilePic from './assets/My Profile.jpeg';
 import mondstadtStarlit from './assets/Mondstadt Starlit.mp3';
@@ -8,13 +8,13 @@ import mondstadtStarlit from './assets/Mondstadt Starlit.mp3';
 const Navbar = ({ isDarkMode }) => {
   const [audioPlaying, setAudioPlaying] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isAboutPage, setIsAboutPage] = useState(false); 
+  const [isAboutPage, setIsAboutPage] = useState(false);
   const audioRef = React.useRef();
-  const location = useLocation(); 
+  const location = useLocation();
 
-  const toggleAudio = () => { 
-    audioPlaying ? audioRef.current.pause() : audioRef.current.play(); 
-    setAudioPlaying(!audioPlaying); 
+  const toggleAudio = () => {
+    audioPlaying ? audioRef.current.pause() : audioRef.current.play();
+    setAudioPlaying(!audioPlaying);
   };
 
   useEffect(() => {
@@ -33,7 +33,7 @@ const Navbar = ({ isDarkMode }) => {
             {["Home", "About", "Portofolio", "Contact"].map((item, i) => (
               <li key={i}>
                 <Link
-                  to={item === "Home" ? "/" : `/${item.toLowerCase()}`} 
+                  to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
                   className="relative group transition duration-300 ease-in-out"
                 >
                   <span className="absolute inset-0 scale-50 bg-blue-400 rounded-full opacity-0 group-hover:opacity-50 group-hover:scale-125 transition-all duration-500"></span>
@@ -46,10 +46,10 @@ const Navbar = ({ isDarkMode }) => {
           </ul>
         </nav>
 
-        <div className="flex items-center space-x-6 mt-4">
+        <div className="flex items-center lg:space-x-6 mt-4 space-x-2">
           <button
             onClick={toggleAudio}
-            className="w-10 h-10 bg-gray-600 rounded-full flex items-center justify-center text-white hover:bg-gray-500 mr-3"
+            className="w-10 h-10 bg-gray-600 rounded-full flex items-center justify-center text-white hover:bg-gray-500 mr-14 lg:mr-0"
           >
             {audioPlaying ? <HiOutlineStop size={24} /> : <HiOutlineMusicNote size={24} />}
           </button>
@@ -59,30 +59,46 @@ const Navbar = ({ isDarkMode }) => {
               className={`${
                 isAboutPage
                   ? "absolute w-64 h-64 top-[350%] right-64 transform translate-x-1/2 animated-border"
-                  : "absolute w-10 h-10 top-4 right-4 mr-10 lg:top-5"
+                  : "absolute w-10 h-10 top-4 right-4 mr-2 lg:top-5"
               } rounded-full overflow-hidden transition-all duration-700 ease-in-out`}
             >
               <img
-                src={profilePic} 
+                src={profilePic}
                 alt="Profile Picture"
                 className="w-full h-full object-cover"
               />
             </div>
           </Link>
 
-
-          <button className="lg:hidden text-white text-3xl ease-in-out" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          <button
+            className={`lg:hidden text-white text-3xl relative z-50 ${
+              isMenuOpen ? "border-blue-400" : "border-transparent"
+            } border-2 p-2 rounded-full transition-all duration-500`}
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            style={{
+              position: "absolute",
+              left: "50%",
+              transform: "translateX(-50%)",
+            }}
+          >
             {isMenuOpen ? <HiOutlineX /> : <HiOutlineMenuAlt4 />}
           </button>
         </div>
       </div>
 
       {/* Mobile Navigation */}
-      <nav className={`${isMenuOpen ? "block" : "hidden"} lg:hidden bg-gray-800/80 border border-transparent absolute top-full left-0 w-full mt-3`}>
-        <ul className="flex flex-col items-start text-white font-vt323 p-4 space-y-4">
+      <nav
+        className={`${
+          isMenuOpen ? "block" : "hidden"
+        } lg:hidden bg-gray-800/80 border border-blue-400 absolute top-full left-0 w-full mt-3 rounded-lg transition-all duration-500`}
+      >
+        <ul className="flex flex-col items-center text-white font-vt323 p-4 space-y-4">
           {["Home", "About", "Portofolio", "Contact"].map((item, i) => (
             <li key={i}>
-              <Link to={item === "Home" ? "/" : `/${item.toLowerCase()}`} className="py-2 hover:text-blue-400">
+              <Link
+                to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+                className="py-2 hover:text-blue-400"
+              >
                 {item}
               </Link>
             </li>
