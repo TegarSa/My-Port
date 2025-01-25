@@ -59,7 +59,7 @@ const Navbar = ({ isDarkMode }) => {
               className={`${
                 isAboutPage
                   ? "absolute w-64 h-64 top-[350%] right-64 transform translate-x-1/2 animated-border"
-                  : "absolute w-10 h-10 top-4 right-4 mr-2 lg:top-5"
+                  : "absolute w-10 h-10 top-4 right-4 mr-2 lg:mr-10 lg:top-5"
               } rounded-full overflow-hidden transition-all duration-700 ease-in-out`}
             >
               <img

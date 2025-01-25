@@ -166,7 +166,7 @@ const Contact = ({ isDarkMode }) => {
               scale: { duration: 2, ease: "easeInOut" },
             }}
           >
-            <div className={`p-20 rounded-lg shadow-2xl text-center font-vt323 ${isDarkMode ? 'bg-gray-800 text-white' : 'bg-white text-black'}`}>
+            <div className={`p-10 lg:p-20 rounded-lg shadow-2xl text-center font-vt323 ${isDarkMode ? 'bg-gray-800 text-white' : 'bg-white text-black'}`}>
               <h3 className="text-2xl font-bold mb-4">Thank you for your feedback!</h3>
               <p className={`text-gray-400 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>Your message has been received. We appreciate your time!</p>
             </div>
