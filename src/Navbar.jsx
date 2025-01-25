@@ -18,7 +18,7 @@ const Navbar = ({ isDarkMode }) => {
   };
 
   useEffect(() => {
-    // Set isAboutPage sesuai dengan URL
+
     setIsAboutPage(location.pathname === "/about");
   }, [location]);
 
@@ -33,7 +33,7 @@ const Navbar = ({ isDarkMode }) => {
             {["Home", "About", "Portofolio", "Contact"].map((item, i) => (
               <li key={i}>
                 <Link
-                  to={item === "Home" ? "/" : `/${item.toLowerCase()}`} // Use Link for navigation
+                  to={item === "Home" ? "/" : `/${item.toLowerCase()}`} 
                   className="relative group transition duration-300 ease-in-out"
                 >
                   <span className="absolute inset-0 scale-50 bg-blue-400 rounded-full opacity-0 group-hover:opacity-50 group-hover:scale-125 transition-all duration-500"></span>
@@ -63,7 +63,7 @@ const Navbar = ({ isDarkMode }) => {
               } rounded-full overflow-hidden transition-all duration-700 ease-in-out`}
             >
               <img
-                src={profilePic} // menggunakan variabel yang berisi gambar
+                src={profilePic} 
                 alt="Profile Picture"
                 className="w-full h-full object-cover"
               />
