@@ -169,7 +169,7 @@ const MainPage = ({ isDarkMode }) => {
               <FaLinkedin size={24} />
             </a>
             <a
-              href="https://instagram.com/tgrstr"
+              href="https://instagram.com/tgrstr__"
               className="hover:text-pink-500 hover:scale-110 transform transition duration-300 ease-in-out"
             >
               <FaInstagram size={24} />
