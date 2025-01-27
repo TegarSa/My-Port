@@ -19,25 +19,25 @@ const Navbar = ({ isDarkMode }) => {
 
   useEffect(() => {
     setIsAboutPage(location.pathname === "/about");
-    setIsMenuOpen(false); 
+    setIsMenuOpen(false);
   }, [location]);
 
   return (
-    <header className={`fixed top-4 left-0 w-full z-50 ${isDarkMode ? 'text-white' : 'text-black'}`}>
+    <header className={`fixed top-8 left-1 w-full z-50 ${isDarkMode ? 'text-white' : 'text-black'}`}>
       <div className="flex justify-between items-center max-w-7xl mx-auto px-4">
-        <div className={`text-${isDarkMode ? 'white' : 'black'} font-bold text-xl mt-6`}>
+        <div className={`text-${isDarkMode ? 'white' : 'black'} font-bold text-base mt-4`}>
           Tegar Satria
         </div>
-        <nav className={`hidden lg:block ${isDarkMode ? 'bg-gray-600/60' : 'bg-gray-300/60'} backdrop-blur-lg border border-gray-500 px-11 py-2 rounded-full mt-4`}>
-          <ul className="flex items-center space-x-6 text-lg font-vt323">
+        <nav className={`hidden lg:block ${isDarkMode ? 'bg-gray-600/60' : 'bg-gray-300/60'} backdrop-blur-lg border border-gray-500 px-8 py-2 rounded-full mt-2 transition-transform duration-300 group`}>
+          <ul className="flex items-center space-x-6 text-xs sm:text-sm md:text-base font-vt323">
             {["Home", "About", "Portofolio", "Contact"].map((item, i) => (
               <li key={i}>
                 <Link
                   to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
                   className="relative group transition duration-300 ease-in-out"
                 >
-                  <span className="absolute inset-0 scale-50 bg-blue-400 rounded-full opacity-0 group-hover:opacity-50 group-hover:scale-125 transition-all duration-500"></span>
-                  <span className="relative z-10 group-hover:text-blue-400 group-hover:scale-115 transition-transform duration-500">
+                  <span className="absolute inset-0 scale-75 bg-blue-400 rounded-full opacity-0 group-hover:opacity-50 group-hover:scale-100 transition-all duration-500"></span>
+                  <span className="relative z-10 group-hover:text-blue-400 group-hover:scale-105 transition-transform duration-500">
                     {item}
                   </span>
                 </Link>
@@ -46,20 +46,20 @@ const Navbar = ({ isDarkMode }) => {
           </ul>
         </nav>
 
-        <div className="flex items-center lg:space-x-6 mt-4 space-x-2">
+        <div className="flex items-center lg:space-x-6 mt-2 space-x-2">
           <button
             onClick={toggleAudio}
-            className="w-10 h-10 bg-gray-600 rounded-full flex items-center justify-center text-white hover:bg-gray-500 mr-14 lg:mr-0"
+            className="w-10 h-10 bg-gray-600 rounded-full flex items-center justify-center text-white hover:bg-gray-500 mr-10 lg:mr-0"
           >
-            {audioPlaying ? <HiOutlineStop size={24} /> : <HiOutlineMusicNote size={24} />}
+            {audioPlaying ? <HiOutlineStop size={22} /> : <HiOutlineMusicNote size={22} />}
           </button>
 
           <Link to="">
             <div
               className={`${
                 isAboutPage
-                  ? "absolute w-64 h-64 top-[350%] right-64 transform translate-x-1/2 animated-border"
-                  : "absolute w-10 h-10 top-4 right-4 mr-2 lg:mr-10 lg:top-5"
+                  ? "absolute w-48 h-48 top-[300%] right-48 transform translate-x-1/2 animated-border"
+                  : "absolute w-10 h-10 top-4 right-4 mr-2 lg:mr-8 lg:top-4"
               } rounded-full overflow-hidden transition-all duration-700 ease-in-out`}
             >
               <img
@@ -71,9 +71,9 @@ const Navbar = ({ isDarkMode }) => {
           </Link>
 
           <button
-            className={`lg:hidden text-white text-3xl relative z-50 ${
+            className={`lg:hidden text-white text-2xl relative z-50 ${
               isMenuOpen ? "border-blue-400" : "border-transparent"
-            } border-2 p-2 rounded-full transition-all duration-500`}
+            } border p-1 rounded-full transition-all duration-500`}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             style={{
               position: "absolute",
@@ -86,25 +86,7 @@ const Navbar = ({ isDarkMode }) => {
         </div>
       </div>
 
-      {/* Mobile Navigation */}
-      <nav
-        className={`${
-          isMenuOpen ? "block" : "hidden"
-        } lg:hidden bg-gray-800/80 border border-blue-400 absolute top-full left-0 w-full mt-3 rounded-lg transition-all duration-500`}
-      >
-        <ul className="flex flex-col items-center text-white font-vt323 p-4 space-y-4">
-          {["Home", "About", "Portofolio", "Contact"].map((item, i) => (
-            <li key={i}>
-              <Link
-                to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                className="py-2 hover:text-blue-400"
-              >
-                {item}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
+      
 
       <audio ref={audioRef} loop>
         <source src={mondstadtStarlit} type="audio/mpeg" />
