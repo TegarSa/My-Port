@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { HiOutlineMusicNote, HiOutlineStop, HiOutlineMenuAlt4, HiOutlineX } from "react-icons/hi";
+import { HiOutlineMusicNote, HiOutlineStop, HiOutlineMenu, HiOutlineX } from "react-icons/hi";
 import { Link, useLocation } from "react-router-dom"; 
 import "./components/About";
 import profilePic from './assets/My Profile.jpeg';
@@ -72,7 +72,7 @@ const Navbar = ({ isDarkMode }) => {
 
 
           <button className="lg:hidden text-white text-3xl ease-in-out" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-            {isMenuOpen ? <HiOutlineX /> : <HiOutlineMenuAlt4 />}
+            {isMenuOpen ? <HiOutlineX /> : <HiOutlineMenu />}
           </button>
         </div>
       </div>
