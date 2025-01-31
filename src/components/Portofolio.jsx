@@ -26,10 +26,10 @@ const projects = [
   },
   {
     title: "Website Wisata Pengklik",
-    description: "A real-time chat application built with Node.js and WebSocket technology.",
-    githubLink: "https://github.com/username/project3",
+    description: "A faculty-led project to promote local tourism and SMEs at Pengklik Village through digital platform.",
+    githubLink: "https://github.com/username/project3", 
     liveDemo: "https://wisatapengklik.com",
-    image: image3, 
+    image: image3,
   },
   {
     title: "Bookshelf-Api",
