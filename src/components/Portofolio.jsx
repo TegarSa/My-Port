@@ -18,11 +18,11 @@ const projects = [
     image: image1,
   },
   {
-    title: "Website Wisata Nglanggeran",
-    description: "A portfolio website showcasing various skills and projects in a sleek design.",
+    title: "Nglanggeran Tourism Website",
+    description: "The official website of Nglanggeran Village to promote local tourism and services.",
     githubLink: "https://github.com/username/project2",
     liveDemo: "https://wisatanglanggeran.com",
-    image: image2, 
+    image: image2,
   },
   {
     title: "Website Wisata Pengklik",
