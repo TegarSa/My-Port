@@ -40,10 +40,10 @@ const projects = [
   },
   {
     title: "Website Gua Jepang Pundong",
-    description: "A real-time chat application built with Node.js and WebSocket technology.",
+    description: "An official tourism website for Gua Jepang Pundong, providing historical insights and visitor information.",
     githubLink: "https://github.com/username/project3",
     liveDemo: "https://guajepangpundong.web.id",
-    image: image5, 
+    image: image5,
   },
 ];
 
