@@ -12,10 +12,10 @@ import image5 from '../assets/image copy 4.png';
 const projects = [
   {
     title: "Website Wisata Semilir",
-    description: "A modern e-commerce platform with advanced search capabilities and a user-friendly interface.",
+    description: "A university community service project for digital tourism development at Wisata Semilir, Terbah Village. ",
     githubLink: "https://github.com/username/project1",
     liveDemo: "https://wisatasemilirterbah.com",
-    image: image1, 
+    image: image1,
   },
   {
     title: "Website Wisata Nglanggeran",
