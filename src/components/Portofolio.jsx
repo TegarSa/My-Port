@@ -33,10 +33,10 @@ const projects = [
   },
   {
     title: "Bookshelf-Api",
-    description: "A real-time chat application built with Node.js and WebSocket technology.",
+    description: "A library API built with Hapi.js for managing book collections efficiently.",
     githubLink: "https://github.com/username/project4",
     liveDemo: "https://project4.com",
-    image: image4, 
+    image: image4,
   },
   {
     title: "Website Gua Jepang Pundong",
