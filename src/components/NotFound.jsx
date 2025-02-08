@@ -98,7 +98,7 @@ const NotFound = ({ isDarkMode }) => {
           key={index}
           src={icon.src}
           alt={`Icon ${index + 1}`}
-          className="floating-icon absolute opacity-80 object-contain sm:w-32 sm:h-32 w-24 h-24"
+          className="floating-icon absolute opacity-80 object-contain sm:w-32 sm:h-32 w-16 h-16"
           style={{ top: icon.top, left: icon.left, right: icon.right }}
         />
       ))}
