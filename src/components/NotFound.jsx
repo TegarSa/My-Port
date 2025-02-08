@@ -48,8 +48,8 @@ const NotFound = ({ isDarkMode }) => {
     <div
       className={`min-h-screen flex flex-col justify-center items-center relative overflow-hidden ${
         isDarkMode
-          ? "bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white"
-          : "bg-gradient-to-r from-gray-100 via-gray-200 to-gray-100 text-black"
+          ? "bg-gray-900 text-white"
+          : "bg-gray-100 text-black"
       }`}
     >
       {/* Background circles */}
