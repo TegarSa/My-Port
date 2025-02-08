@@ -73,7 +73,25 @@ const NotFound = ({ isDarkMode }) => {
           isDarkMode ? "bg-pink-500" : "bg-pink-300"
         } rounded-full opacity-20 blur-xl animate-pulse`}
       ></div>
-      
+
+      {/* Snowfall Animation */}
+      <div className="absolute top-0 left-0 right-0 bottom-0 z-0 pointer-events-none">
+        {[...Array(50)].map((_, index) => (
+          <div
+            key={index}
+            className="snowflake absolute bg-white rounded-full"
+            style={{
+              animation: `snowfall ${Math.random() * 3 + 3}s linear infinite`,
+              left: `${Math.random() * 100}%`,
+              animationDuration: `${Math.random() * 5 + 3}s`, // Randomized falling speed
+              animationDelay: `${Math.random() * 3}s`, // Randomized delay for better effect
+              width: `${Math.random() * 10 + 5}px`,
+              height: `${Math.random() * 10 + 5}px`,
+            }}
+          ></div>
+        ))}
+      </div>
+
       {/* Floating Icons */}
       {icons.map((icon, index) => (
         <img
@@ -102,7 +120,7 @@ const NotFound = ({ isDarkMode }) => {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
-        The page you are looking for might have been removed or relocated. Don't worry, you can navigate back to the homepage or explore other sections of the website using the links below. If you need help, feel free to contact us!
+        The page you are looking for might have been removed or relocated. Don't worry, you can navigate back to the homepage or explore other sections of the website using the links below. If you need help, feel free to contact me!
       </motion.p>
     </div>
   );

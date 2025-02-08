@@ -90,3 +90,25 @@
     font-size: 14px !important;
   }
 }
+
+/* Aturan animasi salju */
+@keyframes snowfall {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100vh); /* Salju bergerak ke bawah */
+  }
+}
+
+/* Styling untuk butiran salju */
+.snowflake {
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  pointer-events: none;
+  z-index: 0;
+  animation: snowfall linear infinite;
+}
+
