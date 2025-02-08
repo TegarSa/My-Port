@@ -18,11 +18,11 @@ const icons = [
   { top: "40%", left: "25%", src: image3 },
   { top: "70%", left: "5%", src: image4 },
   { top: "80%", left: "30%", src: image5 },
-  { top: "15%", right: "15%", src: image6 },
-  { top: "35%", right: "5%", src: image7 },
-  { top: "55%", right: "25%", src: image8 },
-  { top: "75%", right: "5%", src: image9 },
-  { top: "85%", right: "30%", src: image10 },
+  { top: "10%", right: "15%", src: image6 },
+  { top: "30%", right: "5%", src: image7 },
+  { top: "40%", right: "25%", src: image8 },
+  { top: "70%", right: "5%", src: image9 },
+  { top: "80%", right: "30%", src: image10 },
 ];
 
 const NotFound = ({ isDarkMode }) => {
@@ -32,8 +32,8 @@ const NotFound = ({ isDarkMode }) => {
         const rect = icon.getBoundingClientRect();
         const iconX = rect.left + rect.width / 2;
         const iconY = rect.top + rect.height / 2;
-        const deltaX = (e.clientX - iconX) * (index % 2 === 0 ? 0.05 : 0.02); 
-        const deltaY = (e.clientY - iconY) * (index % 2 === 0 ? 0.05 : 0.02); 
+        const deltaX = (e.clientX - iconX) * (index % 2 === 0 ? 0.05 : 0.02); // Efek cursor berbeda
+        const deltaY = (e.clientY - iconY) * (index % 2 === 0 ? 0.05 : 0.02); // Efek cursor berbeda
         icon.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
       });
     };
@@ -87,13 +87,23 @@ const NotFound = ({ isDarkMode }) => {
       
       {/* 404 Text */}
       <motion.h1
-        className="text-6xl font-extrabold text-pink-glow drop-shadow-lg"
+        className="text-4xl sm:text-5xl font-vt323 text-pink-glow drop-shadow-lg"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
         404 Not Found
       </motion.h1>
+
+      {/* Additional paragraph */}
+      <motion.p
+        className="text-sm sm:text-lg text-center mt-4 max-w-3xl mx-auto px-4 font-vt323 text-pink-glow z-10"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+      >
+        The page you are looking for might have been removed or relocated. Don't worry, you can navigate back to the homepage or explore other sections of the website using the links below. If you need help, feel free to contact us!
+      </motion.p>
     </div>
   );
 };
