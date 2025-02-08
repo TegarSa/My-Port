@@ -1,14 +1,24 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import "./About.css";
+import image1 from '../assets/Kotlin.png';
+import image2 from '../assets/Tailwind.png';
+import image3 from '../assets/Swift.png';
+import image4 from '../assets/Dart.png';
+import image5 from '../assets/JS.png';
+import image6 from '../assets/Golang.png';
+import image7 from '../assets/image copy 4.png';
+import image8 from '../assets/image copy 4.png';
+import image9 from '../assets/image copy 4.png';
+import image10 from '../assets/image copy 4.png';
 
 const icons = [
-  { top: "10%", left: "5%", src: "icon1.png" },
-  { top: "30%", left: "10%", src: "icon2.png" },
-  { top: "50%", left: "15%", src: "icon3.png" },
-  { top: "70%", left: "5%", src: "icon4.png" },
-  { top: "90%", left: "10%", src: "icon5.png" },
-  { top: "15%", right: "5%", src: "icon6.png" },
+  { top: "10%", left: "5%", src: image1 },
+  { top: "30%", left: "10%", src: image2 },
+  { top: "50%", left: "15%", src: image3 },
+  { top: "70%", left: "5%", src: image4 },
+  { top: "90%", left: "10%", src: image5 },
+  { top: "15%", right: "5%", src: image6 },
   { top: "35%", right: "10%", src: "icon7.png" },
   { top: "55%", right: "15%", src: "icon8.png" },
   { top: "75%", right: "5%", src: "icon9.png" },
