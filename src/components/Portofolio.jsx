@@ -42,7 +42,7 @@ const projects = [
     title: "Website Gua Jepang Pundong",
     description: "An official tourism website for Gua Jepang Pundong, providing historical insights and visitor information.",
     githubLink: "https://github.com/username/project3",
-    liveDemo: "https://guajepangpundong.web.id",
+    liveDemo: "#",
     image: image5,
   },
 ];
