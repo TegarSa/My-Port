@@ -32,7 +32,7 @@ const NotFound = ({ isDarkMode }) => {
         const rect = icon.getBoundingClientRect();
         const iconX = rect.left + rect.width / 2;
         const iconY = rect.top + rect.height / 2;
-        const deltaX = (e.clientX - iconX) * (index % 2 === 0 ? 0.05 : 0.02); // Efek cursor berbeda
+        const deltaX = (e.clientX - iconX) * (index % 2 === 0 ? 0.05 : 0.02); 
         const deltaY = (e.clientY - iconY) * (index % 2 === 0 ? 0.05 : 0.02); // Efek cursor berbeda
         icon.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
       });
