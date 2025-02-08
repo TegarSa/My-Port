@@ -146,8 +146,8 @@ const Portfolio = ({ isDarkMode }) => {
                   <span>GitHub</span>
                 </a>
                 <a
-                  href={project.liveDemo}
-                  target="_blank"
+                  href={project.liveDemo === "#" ? "/NotFound.jsx" : project.liveDemo}
+                  target={project.liveDemo === "#" ? "_self" : "_blank"}
                   rel="noopener noreferrer"
                   className="flex items-center space-x-2 text-blue-500 hover:text-blue-800 transition-colors px-2 md:px-4 z-10"
                 >

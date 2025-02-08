@@ -42,11 +42,27 @@ const NotFound = ({ isDarkMode }) => {
           : "bg-gradient-to-r from-gray-100 via-gray-200 to-gray-100 text-black"
       }`}
     >
-      {/* Background animated circles */}
-      <div className="fixed top-0 left-0 w-40 h-40 bg-blue-300 rounded-full opacity-20 blur-xl animate-pulse"></div>
-      <div className="fixed top-0 right-0 w-40 h-40 bg-pink-300 rounded-full opacity-20 blur-xl animate-pulse"></div>
-      <div className="fixed bottom-0 left-0 w-40 h-40 bg-pink-300 rounded-full opacity-20 blur-xl animate-pulse"></div>
-      <div className="fixed bottom-0 right-0 w-40 h-40 bg-blue-300 rounded-full opacity-20 blur-xl animate-pulse"></div>
+      {/* Background circles */}
+      <div
+        className={`fixed top-0 left-0 w-20 h-20 sm:w-40 sm:h-40 ${
+          isDarkMode ? "bg-blue-500" : "bg-blue-300"
+        } rounded-full opacity-20 blur-xl animate-pulse`}
+      ></div>
+      <div
+        className={`fixed top-0 right-0 w-20 h-20 sm:w-40 sm:h-40 ${
+          isDarkMode ? "bg-pink-500" : "bg-pink-300"
+        } rounded-full opacity-20 blur-xl animate-pulse`}
+      ></div>
+      <div
+        className={`fixed bottom-0 right-0 w-20 h-20 sm:w-40 sm:h-40 ${
+          isDarkMode ? "bg-blue-500" : "bg-blue-300"
+        } rounded-full opacity-20 blur-xl animate-pulse`}
+      ></div>
+      <div
+        className={`fixed bottom-0 left-0 w-20 h-20 sm:w-40 sm:h-40 ${
+          isDarkMode ? "bg-pink-500" : "bg-pink-300"
+        } rounded-full opacity-20 blur-xl animate-pulse`}
+      ></div>
       
       {/* Floating Icons */}
       {icons.map((icon, index) => (
