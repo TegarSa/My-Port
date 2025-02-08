@@ -21,7 +21,7 @@ const projects = [
     title: "Nglanggeran Tourism Website",
     description: "The official website of Nglanggeran Village to promote local tourism and services.",
     githubLink: "https://github.com/username/project2",
-    liveDemo: "https://wisatanglanggeran.com",
+    liveDemo: "#",
     image: image2,
   },
   {
