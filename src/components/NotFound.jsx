@@ -7,10 +7,10 @@ import image3 from '../assets/Swift.png';
 import image4 from '../assets/Dart.png';
 import image5 from '../assets/JS.png';
 import image6 from '../assets/Golang.png';
-import image7 from '../assets/image copy 4.png';
-import image8 from '../assets/image copy 4.png';
-import image9 from '../assets/image copy 4.png';
-import image10 from '../assets/image copy 4.png';
+import image7 from '../assets/Bevy.png';
+import image8 from '../assets/Rust.png';
+import image9 from '../assets/TS.png';
+import image10 from '../assets/C++.png';
 
 const icons = [
   { top: "10%", left: "5%", src: image1 },
@@ -19,10 +19,10 @@ const icons = [
   { top: "70%", left: "5%", src: image4 },
   { top: "90%", left: "10%", src: image5 },
   { top: "15%", right: "5%", src: image6 },
-  { top: "35%", right: "10%", src: "icon7.png" },
-  { top: "55%", right: "15%", src: "icon8.png" },
-  { top: "75%", right: "5%", src: "icon9.png" },
-  { top: "95%", right: "10%", src: "icon10.png" },
+  { top: "35%", right: "10%", src: image7 },
+  { top: "55%", right: "15%", src: image8 },
+  { top: "75%", right: "5%", src: image9 },
+  { top: "95%", right: "10%", src: image10 },
 ];
 
 const NotFound = ({ isDarkMode }) => {
