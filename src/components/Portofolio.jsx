@@ -28,7 +28,7 @@ const projects = [
     title: "Website Wisata Pengklik",
     description: "A faculty-led project to promote local tourism and SMEs at Pengklik Village through digital platform.",
     githubLink: "https://github.com/username/project3", 
-    liveDemo: "https://wisatapengklik.com",
+    liveDemo: "#",
     image: image3,
   },
   {
