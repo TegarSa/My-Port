@@ -83,8 +83,8 @@ const NotFound = ({ isDarkMode }) => {
             style={{
               animation: `snowfall ${Math.random() * 3 + 3}s linear infinite`,
               left: `${Math.random() * 100}%`,
-              animationDuration: `${Math.random() * 5 + 3}s`, // Randomized falling speed
-              animationDelay: `${Math.random() * 3}s`, // Randomized delay for better effect
+              animationDuration: `${Math.random() * 5 + 3}s`, 
+              animationDelay: `${Math.random() * 3}s`, 
               width: `${Math.random() * 10 + 5}px`,
               height: `${Math.random() * 10 + 5}px`,
             }}
