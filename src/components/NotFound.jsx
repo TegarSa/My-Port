@@ -13,27 +13,27 @@ import image9 from '../assets/TS.png';
 import image10 from '../assets/C++.png';
 
 const icons = [
-  { top: "10%", left: "5%", src: image1 },
-  { top: "30%", left: "10%", src: image2 },
-  { top: "50%", left: "15%", src: image3 },
+  { top: "10%", left: "15%", src: image1 },
+  { top: "30%", left: "5%", src: image2 },
+  { top: "40%", left: "25%", src: image3 },
   { top: "70%", left: "5%", src: image4 },
-  { top: "90%", left: "10%", src: image5 },
-  { top: "15%", right: "5%", src: image6 },
-  { top: "35%", right: "10%", src: image7 },
-  { top: "55%", right: "15%", src: image8 },
+  { top: "80%", left: "30%", src: image5 },
+  { top: "15%", right: "15%", src: image6 },
+  { top: "35%", right: "5%", src: image7 },
+  { top: "55%", right: "25%", src: image8 },
   { top: "75%", right: "5%", src: image9 },
-  { top: "95%", right: "10%", src: image10 },
+  { top: "85%", right: "30%", src: image10 },
 ];
 
 const NotFound = ({ isDarkMode }) => {
   useEffect(() => {
     const handleMouseMove = (e) => {
-      document.querySelectorAll(".floating-icon").forEach((icon) => {
+      document.querySelectorAll(".floating-icon").forEach((icon, index) => {
         const rect = icon.getBoundingClientRect();
         const iconX = rect.left + rect.width / 2;
         const iconY = rect.top + rect.height / 2;
-        const deltaX = (e.clientX - iconX) * 0.05;
-        const deltaY = (e.clientY - iconY) * 0.05;
+        const deltaX = (e.clientX - iconX) * (index % 2 === 0 ? 0.05 : 0.02); // Efek cursor berbeda
+        const deltaY = (e.clientY - iconY) * (index % 2 === 0 ? 0.05 : 0.02); // Efek cursor berbeda
         icon.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
       });
     };
@@ -80,7 +80,7 @@ const NotFound = ({ isDarkMode }) => {
           key={index}
           src={icon.src}
           alt={`Icon ${index + 1}`}
-          className="floating-icon absolute w-12 sm:w-16 opacity-80"
+          className="floating-icon absolute w-32 h-32 opacity-80 object-contain"
           style={{ top: icon.top, left: icon.left, right: icon.right }}
         />
       ))}
