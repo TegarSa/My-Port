@@ -15,12 +15,12 @@ import image10 from '../assets/C++.png';
 const icons = [
   { top: "10%", left: "15%", src: image1 },
   { top: "30%", left: "5%", src: image2 },
-  { top: "40%", left: "25%", src: image3 },
+  { top: "30%", left: "25%", src: image3 },
   { top: "70%", left: "5%", src: image4 },
   { top: "80%", left: "30%", src: image5 },
   { top: "10%", right: "15%", src: image6 },
   { top: "30%", right: "5%", src: image7 },
-  { top: "40%", right: "25%", src: image8 },
+  { top: "30%", right: "25%", src: image8 },
   { top: "70%", right: "5%", src: image9 },
   { top: "80%", right: "30%", src: image10 },
 ];
@@ -32,8 +32,8 @@ const NotFound = ({ isDarkMode }) => {
         const rect = icon.getBoundingClientRect();
         const iconX = rect.left + rect.width / 2;
         const iconY = rect.top + rect.height / 2;
-        const deltaX = (e.clientX - iconX) * (index % 2 === 0 ? 0.05 : 0.02); // Efek cursor berbeda
-        const deltaY = (e.clientY - iconY) * (index % 2 === 0 ? 0.05 : 0.02); // Efek cursor berbeda
+        const deltaX = (e.clientX - iconX) * (index % 2 === 0 ? 0.05 : 0.02); 
+        const deltaY = (e.clientY - iconY) * (index % 2 === 0 ? 0.05 : 0.02); 
         icon.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
       });
     };
@@ -80,7 +80,7 @@ const NotFound = ({ isDarkMode }) => {
           key={index}
           src={icon.src}
           alt={`Icon ${index + 1}`}
-          className="floating-icon absolute w-32 h-32 opacity-80 object-contain"
+          className="floating-icon absolute opacity-80 object-contain sm:w-32 sm:h-32 w-24 h-24"
           style={{ top: icon.top, left: icon.left, right: icon.right }}
         />
       ))}
