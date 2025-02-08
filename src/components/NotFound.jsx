@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
-import "./NotFound.css";
+import "./About.css";
 
 const icons = [
   { top: "10%", left: "5%", src: "icon1.png" },
