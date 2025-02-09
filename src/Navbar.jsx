@@ -22,6 +22,23 @@ const Navbar = ({ isDarkMode }) => {
     setIsMenuOpen(false);
   }, [location]);
 
+  useEffect(() => {
+    const playAudio = async () => {
+      if (audioRef.current) {
+        audioRef.current.muted = true; 
+        try {
+          await audioRef.current.play();
+          audioRef.current.muted = false; 
+          setAudioPlaying(true);
+        } catch (error) {
+          console.log("Autoplay blocked:", error);
+        }
+      }
+    };
+  
+    playAudio();
+  }, []);
+  
   return (
     <header className={`fixed top-4 left-0 w-full z-50 ${isDarkMode ? 'text-white' : 'text-black'}`}>
       <div className="flex justify-between items-center max-w-7xl mx-auto px-4">
@@ -90,9 +107,8 @@ const Navbar = ({ isDarkMode }) => {
         </ul>
       </nav>
 
-      <audio ref={audioRef} loop>
+      <audio ref={audioRef} loop allow="autoplay">
         <source src={mondstadt} type="audio/mpeg" />
-        Your browser does not support the audio element.
       </audio>
     </header>
   );
