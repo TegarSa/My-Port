@@ -12,6 +12,7 @@ import Portfolio from "./components/Portofolio";
 import Contact from "./components/Contact";
 import moonsongGif from './assets/moonsong-gif-edition.gif';
 import NotFound from "./components/NotFound"; 
+import CV from "./assets/cv tegar.pdf";
 
 
 const App = () => {
@@ -139,6 +140,15 @@ const MainPage = ({ isDarkMode }) => {
     };
   }, []);
 
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = CV; // Menggunakan path dari import
+    link.download = "CV. Tegar Satria Iman Saputra.pdf"; // Nama file saat didownload
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <main className="flex flex-col items-center justify-center min-h-screen px-4 md:px-16 space-y-8 mt-32 md:mt-64 relative">
       <div className="flex flex-col md:flex-row items-center justify-center md:space-x-16 md:space-y-0 space-y-8 mb-16">
@@ -180,7 +190,10 @@ const MainPage = ({ isDarkMode }) => {
             </a>
           </div>
 
-          <button className="px-4 sm:px-6 py-2 bg-blue-500 text-white font-bold text-sm rounded-full shadow-lg hover:bg-blue-600 hover:scale-110 transform transition duration-300 ease-in-out font-vt323">
+          <button 
+            onClick={handleDownload}
+            className="px-4 sm:px-6 py-2 bg-blue-500 text-white font-bold text-sm rounded-full shadow-lg hover:bg-blue-600 hover:scale-110 transform transition duration-300 ease-in-out font-vt323"
+          >
             <span className="flex items-center space-x-1">
               <span>Download CV</span>
               <span className="animate-bounce">&#x21E9;</span>
