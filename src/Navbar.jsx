@@ -3,7 +3,7 @@ import { HiOutlineMusicNote, HiOutlineStop, HiOutlineMenu, HiOutlineX } from "re
 import { Link, useLocation } from "react-router-dom"; 
 import "./components/About";
 import profilePic from './assets/My Profile.jpeg';
-import mondstadtStarlit from './assets/Mondstadt Starlit.mp3';
+import mondstadt from './assets/Dusk in Mondstadt.mp3';
 
 const Navbar = ({ isDarkMode }) => {
   const [audioPlaying, setAudioPlaying] = useState(false);
@@ -91,7 +91,7 @@ const Navbar = ({ isDarkMode }) => {
       </nav>
 
       <audio ref={audioRef} loop>
-        <source src={mondstadtStarlit} type="audio/mpeg" />
+        <source src={mondstadt} type="audio/mpeg" />
         Your browser does not support the audio element.
       </audio>
     </header>
