@@ -54,7 +54,7 @@ const Contact = ({ isDarkMode }) => {
             <ul className="space-y-4 font-vt323 text-sm sm:text-xs lg:text-lg">
               {[
                 { icon: <FaPhoneAlt size={20} />, text: "+62 812 254 877 45" },
-                { icon: <FaEnvelope size={20} />, text: "takamurasetsuna38@gmail.com" },
+                { icon: <FaEnvelope size={20} />, text: "direct message" },
                 { icon: <FaMapMarkerAlt size={20} />, text: "Yogyakarta, Indonesia" },
                 { icon: <FaDiscord size={20} />, text: "discord.gg/zhongxinatg"},
                 { icon: <FaTwitter size={20} />, text: "@tgrstr" },
