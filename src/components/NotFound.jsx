@@ -120,7 +120,7 @@ const NotFound = ({ isDarkMode }) => {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
-        The page you are looking for might have been removed or relocated. Don't worry, you can navigate back to the homepage or explore other sections of the website using the links below. If you need help, feel free to contact me!
+        The page you are looking for might have been removed or relocated. Don't worry, the link will be available soon, or the page is currently under maintenance.
       </motion.p>
     </div>
   );

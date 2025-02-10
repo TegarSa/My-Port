@@ -23,7 +23,7 @@ const About = ({ isDarkMode }) => {
 
   const stats = [
     { label: "+ Years Experience", value: 1 },
-    { label: "Projects Completed", value: 17 },
+    { label: "Projects Completed", value: 10 },
     { label: "Programming Languages", value: 6 },
     { label: "Frameworks", value: 6 },
   ];
