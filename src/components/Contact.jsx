@@ -53,7 +53,7 @@ const Contact = ({ isDarkMode }) => {
             <h3 className="text-sm sm:text-xs lg:text-lg font-bold font-vt323 mb-4">Contact Information</h3>
             <ul className="space-y-4 font-vt323 text-sm sm:text-xs lg:text-lg">
               {[
-                { icon: <FaPhoneAlt size={20} />, text: "+62 123 456 789" },
+                { icon: <FaPhoneAlt size={20} />, text: "+62 812 254 877 45" },
                 { icon: <FaEnvelope size={20} />, text: "email@example.com" },
                 { icon: <FaMapMarkerAlt size={20} />, text: "Yogyakarta, Indonesia" },
                 { icon: <FaDiscord size={20} />, text: "discord.gg/zhongxinatg"},
