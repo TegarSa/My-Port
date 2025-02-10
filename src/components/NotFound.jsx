@@ -17,11 +17,11 @@ const icons = [
   { top: "30%", left: "5%", src: image2 },
   { top: "30%", left: "25%", src: image3 },
   { top: "70%", left: "5%", src: image4 },
-  { top: "80%", left: "30%", src: image5 },
+  { top: "80%", left: "30%", src: image7 },
   { top: "10%", right: "15%", src: image6 },
-  { top: "30%", right: "5%", src: image7 },
+  { top: "30%", right: "5%", src: image9 },
   { top: "30%", right: "25%", src: image8 },
-  { top: "70%", right: "5%", src: image9 },
+  { top: "70%", right: "5%", src: image5 },
   { top: "80%", right: "30%", src: image10 },
 ];
 

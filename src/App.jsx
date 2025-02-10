@@ -55,7 +55,6 @@ const App = () => {
           <Route path="/about" element={<About isDarkMode={isDarkMode} />} /> 
           <Route path="/portofolio" element={<Portfolio isDarkMode={isDarkMode} />} />
           <Route path="/contact" element={<Contact isDarkMode={isDarkMode}/>} />
-          <Route path="/" element={<Portfolio />} />
           <Route path="/not-found" element={<NotFound isDarkMode={isDarkMode}/>} />
           <Route path="*" element={<NotFound isDarkMode={isDarkMode}/>} /> 
         </Routes>
