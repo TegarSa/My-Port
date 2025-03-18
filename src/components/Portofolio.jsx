@@ -7,6 +7,7 @@ import image2 from '../assets/image copy.png';
 import image3 from '../assets/image copy 2.png';
 import image4 from '../assets/image copy 3.png';
 import image5 from '../assets/image copy 4.png';
+import image6 from '../assets/image copy 5.png';
 
 
 const projects = [
@@ -44,6 +45,13 @@ const projects = [
     githubLink: "https://github.com/username/project3",
     liveDemo: "#",
     image: image5,
+  },
+  {
+    title: "Travel APP Journal",  
+    description: "note-taking for travelers. This application is being developed as part of my final project with my team.",
+    githubLink: "https://github.com/r10Gonzales/Travel-Journal",
+    liveDemo: "#",
+    image: image6,
   },
 ];
 
